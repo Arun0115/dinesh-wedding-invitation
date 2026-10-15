@@ -132,7 +132,7 @@ export default function SaveTheDate() {
   return (
     <section id="save-the-date" ref={sectionRef} className="relative w-full flex justify-center" style={{ minHeight: '100svh' }}>
       <div
-        className="relative w-full flex flex-col items-center justify-center gap-6 px-6 py-24 text-center"
+        className="relative w-full flex flex-col items-center justify-center gap-3 px-6 py-4 text-center"
         style={{ maxWidth: '520px' }}
       >
         <div>
