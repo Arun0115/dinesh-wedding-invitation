@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <radialGradient id="seal" cx="35%" cy="30%" r="75%">
+      <stop offset="0%" stop-color="#F2DEE1" />
+      <stop offset="100%" stop-color="#D8A3AA" />
+    </radialGradient>
+  </defs>
+  <circle cx="50" cy="50" r="48" fill="url(#seal)" stroke="#D8A3AA" stroke-width="1.5" />
+  <circle cx="50" cy="50" r="42" fill="none" stroke="#5A1620" stroke-opacity="0.3" stroke-width="1.4" stroke-dasharray="2 4" />
+  <circle cx="50" cy="50" r="35" fill="none" stroke="#5A1620" stroke-opacity="0.25" stroke-width="0.8" />
+  <text x="50" y="58" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="30" fill="#5A1620">D&#8226;H</text>
+</svg>

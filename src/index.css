@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  @apply font-body text-ink bg-ivory;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---- falling petals (Opening screen) ---- */
+.petal {
+  position: absolute;
+  top: -5%;
+  border-radius: 60% 0% 60% 0%;
+  opacity: 0;
+  transform: rotate(var(--rotateStart));
+  animation-name: petal-fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes petal-fall {
+  0% {
+    transform: translate(0, 0) rotate(var(--rotateStart));
+    opacity: 0;
+  }
+  8% {
+    opacity: 0.85;
+  }
+  92% {
+    opacity: 0.55;
+  }
+  100% {
+    transform: translate(var(--drift), 115vh) rotate(calc(var(--rotateStart) + 220deg));
+    opacity: 0;
+  }
+}
+
+/* ---- sparkle burst (Opening screen tap) ---- */
+.sparkle-dot {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fdf3f4, #d8a3aa 70%);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 60;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
